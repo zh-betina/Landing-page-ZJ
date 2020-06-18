@@ -15,43 +15,47 @@
         <span class="nav__logo--text">Your next holidays</span>
       </div>
       <div class="nav__links-box">
-        <li class="nav__links-list">
+        <li class="nav__links-list list">
           <ul class="nav__link link"><a href="#">Home</a></ul>
           <ul class="nav__link link"><a href="#">Product</a></ul>
           <ul class="nav__link link"><a href="#">About</a></ul>
           <ul class="nav__link link"><a href="#">Contact</a></ul>
         </li>
       </div>
-      <button class="nav__button btn--purple btn">Sign Up</button>
+      <button class="nav__button btn btn-purple">Sign up</button>
     </nav>
     <header class="header">
       <div class="header__box">
-        <h1 class="header__text">Find the Best Holiday's Destination in Seconds</h1>
+        <h1 class="header__text">Find the Best Holiday's Destination <p>in Seconds</p></h1>
         <div class="header__buttons-box">
-          <button class="header__btn btn--white btn">Get Started</button>
-          <button class="header__btn btn--purple btn">Try for Free</button>
+          <button class="header__btn btn btn-white">Get Started</button>
+          <button class="header__btn btn btn-purple">Try for Free</button>
         </div>
         <div class="header__img">
           <img src="./img/header-img.jpg" alt="Photo of the beach in Turkey">
         </div>
       </div>
     </header>
-    <main>
+    <main class="main">
         <form class="form__subscribe">
-          <h2 class="form__subscribe--text-main">Subscribe</h2>
-          <label for="email-form" class="form__label--text-p text">Subscribe to get exclusive content</label>
-          <input class="form__input" type="email" id="email-form" name="email-form" placeholder="Enter Your Address Email" required>
-            <button class="form__btn btn--purple btn">Subscribe</button>
+          <h2 class="form__subscribe--heading text-uppercase text-dark">Subscribe</h2>
+          <label for="email" class="form__label--text-p text-dark">Subscribe to get exclusive content</label>
+          <div class="form__subscribe-input-box">
+            <input class="form__input" type="email" id="email" name="email" placeholder="Enter Your Address Email" required>
+            <button class="form__btn btn btn-purple text-uppercase text-white">Subscribe</button>
+          </div>
         </form>
     </main>
     <footer class="footer">
-      <div class="footer__links-box">
-        <li class="footer__links-list">
+      <div class="footer__left-box">
+        <li class="footer__links-list list">
           <ul class="footer__link link"><a href="#">Regulamin</a></ul>
           <ul class="footer__link link"><a href="#">Polityka prywatności</a></ul>
           <ul class="footer__link link"><a href="#">Kontakt</a></ul>
         </li>
-        <span class="footer__text text">2020, Wszelkie prawa zastrzeżone</span>
+        <div class="footer__bottom-text">
+          <p class="footer__text text-white">2020, Wszelkie prawa zastrzeżone</p>
+        </div>
       </div>
       <div class="footer__map">
         <div class="footer__map--canvas">
@@ -61,9 +65,9 @@
           </iframe>
         </div>
       </div>
-      <div class="footer__contact-network">
-        <p class="footer__text text"><span class="fas fa-map-marker-alt footer__map-icon"></span>Some location somewhere</p>
-        <p class="footer__text text"><span class="fas fa-mobile-alt footer__phone-icon"></span>(48) 123 456 789</p>
+      <div class="footer__contact-network footer__right-box">
+        <p class="footer__text text-white"><span class="fas fa-map-marker-alt footer__map-icon"></span>Some location somewhere</p>
+        <p class="footer__text text-white"><span class="fas fa-mobile-alt footer__phone-icon"></span>(48) 123 456 789</p>
         <div class="footer__social-media icons">
           <span class="fab fa-twitter footer__twitter-icon"></span>
           <span class="fab fa-facebook-square footer__fb-icon"></span>
