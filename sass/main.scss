@@ -24,6 +24,20 @@ $flex-row: row;
   display: flex;
   flex-direction: $dir;
 }
+
+@mixin btn-after($col){
+  content: "";
+  background-color: $col;
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+  border-radius: 3rem;
+  position: absolute;
+  transition: all .3s;
+  z-index: -3;
+  top: 0;
+  left: 0;
+}
 //styling:
 
 *{
@@ -111,6 +125,8 @@ nav.nav{
 .btn-white{
   background-color: $white-clr;
   color: $black-clr;
+  position: relative;
+  z-index: 5;
 }
 
 .list{
@@ -318,19 +334,15 @@ footer.footer .footer__right-box{
   font-size: $large-icon;
 }
 
-//--------------animations----------------
+//--------------on hover and active states effects----------------
+//btns
+
 .btn-purple::after{
-  content: "";
-  background-color: $white-clr;
-  display: inline-block;
-  height: 100%;
-  width: 0%;
-  border-radius: 3rem;
-  position: absolute;
-  transition: all .3s;
-  z-index: -3;
-  top: 0;
-  left: 0;
+  @include btn-after($white-clr);
+}
+
+.btn-white::after{
+  @include btn-after($purple-clr);
 }
 
 .btn:hover{
@@ -341,8 +353,27 @@ footer.footer .footer__right-box{
   color: $black-clr;
 }
 
-.btn-purple:hover::after{
+.btn-white:hover{
+  color: $white-clr;
+}
+
+.btn-purple:hover::after,
+.btn-white:hover::after{
   width: 100%;
   height: 100%;
-  color: $black-clr;
 }
+
+.btn-purple:active::after,
+.btn-white:active::after{
+  transform: scaleX(1) scaleY(0);
+}
+
+.btn-purple:active::after{
+  background-color: darken($purple-clr, 8%);
+}
+
+.btn-white:active::after{
+  background-color: lighten($white-clr, 8%);
+}
+
+//menu
