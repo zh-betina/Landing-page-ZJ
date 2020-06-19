@@ -167,10 +167,16 @@ h1.header__text{
 
   .header__btn{
     width: 22rem;
+    box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
+;
   }
 
   button:first-child{
     margin-right: 6rem;
+  }
+
+  button:nth-child(2){
+    background-color: transparent;
   }
 }
 
@@ -309,3 +315,5 @@ footer.footer .footer__right-box{
 .footer__fb-icon{
   font-size: $large-icon;
 }
+
+//--------------animations----------------
