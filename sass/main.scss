@@ -77,27 +77,28 @@ nav.nav{
   .nav__links-box{
     @include flex($flex-row);
     justify-content: space-between;
-    width: 39.30rem;
+    width: 42.3rem;
     margin-top: -0.3rem;
     padding-left: 5.3rem;
 
     .nav__links-list .nav__link{
       display: inline-block;
       font-size: $font-smaller;
-      padding-top: 1.2rem;
+
+        a{
+          transition: all .6s;
+          padding: 1.2rem;
+          border: 0.1px solid transparent;
+          outline: 0;
+        }
     }
 }
 
-.nav__links-list ul:first-child{
-  margin-right: 4.6rem;
-}
-
-.nav__links-list ul:nth-child(2){
-  margin-right: 3.5rem;
-}
-
+.nav__links-list ul:first-child,
+.nav__links-list ul:nth-child(2),
 .nav__links-list ul:nth-child(3){
-  margin-right: 3.9rem;
+  margin-right: 3rem;
+
 }
 
 .nav__button{
@@ -112,6 +113,7 @@ nav.nav{
   height: 4.5rem;
   border-style: solid;
   border-width: thin;
+  outline: 0;
 
 }
 
@@ -377,3 +379,14 @@ footer.footer .footer__right-box{
 }
 
 //menu
+
+div.nav__links-box .nav__links-list .nav__link a:hover{
+  border-top: 0.1px solid $white-clr;
+  border-bottom: 0.1px solid $white-clr;
+}
+
+div.nav__links-box .nav__links-list .nav__link a:active{
+  background-color: darken($purple-clr, 5%);
+  border: 0.1px solid transparent;
+  box-shadow: 0px 3px 22px -10px rgba($white-clr,1);
+}
