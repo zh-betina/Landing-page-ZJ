@@ -67,10 +67,27 @@ nav.nav{
   padding: 4.4rem 15.8rem 4.4rem 15.8rem;
   max-width: 100vw;
 
-    .nav__logo--text {
+    .nav__logo--text{
       color: $white-clr;
       font-size: $font-large;
       text-transform: capitalize;
+
+      span{
+        opacity: 0;
+        }
+
+      span:first-child{
+        animation: appear 3s ease .1s;
+        animation-fill-mode: forwards;
+      }
+      span:nth-child(2){
+        animation: appear 3s ease .4s;
+        animation-fill-mode: forwards;
+      }
+      span:last-child{
+        animation: appear 3s ease .8s;
+        animation-fill-mode: forwards;
+      }
     }
   }
 
@@ -229,11 +246,28 @@ main.main{
 
         div input.form__input{
           background-color: $grey-clr;
+          padding: 0.2rem 1rem;
           border-style: solid;
           border-width: thin;
           border-color: darken($grey-clr, 4%);
           color: $black-clr;
+          width: 37.5rem;
+          height: 4.1rem;
+          border-radius: 0.8rem;
+          margin-right: 4rem;
 
+            &:focus{
+              background: linear-gradient(90deg, rgba(138,0,131,.5) 7%,
+              rgba(172,137,170,1) 30%,
+              rgba(255,255,255,0.9682072658164829) 68%);
+            }
+
+            &:valid{
+              background: linear-gradient(90deg, rgba(0,138,10,0.6124649688977153) 7%,
+              rgba(109,167,114,0.5508403190377713) 30%,
+              rgba(255,255,255,0.9682072658164829) 68%);
+            }
+            
             &::placeholder{
               font-size: $font-smaller;
               color: $black-clr;
@@ -247,15 +281,9 @@ main.main{
   display: inline-block;
   margin-top: 4.2rem;
 
-    .form__input{
-      width: 37.5rem;
-      height: 4.1rem;
-      border-radius: 0.8rem;
-      margin-right: 4rem;
-    }
-
     .form__btn{
       width: 20.3rem;
+      border-color: $purple-clr;
     }
 }
 
@@ -389,4 +417,12 @@ div.nav__links-box .nav__links-list .nav__link a:active{
   background-color: darken($purple-clr, 5%);
   border: 0.1px solid transparent;
   box-shadow: 0px 3px 22px -10px rgba($white-clr,1);
+}
+
+//------------on-load animations-----
+
+@keyframes appear{
+  to {
+    opacity: 1;
+  }
 }
