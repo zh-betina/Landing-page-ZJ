@@ -267,7 +267,7 @@ main.main{
               rgba(109,167,114,0.5508403190377713) 30%,
               rgba(255,255,255,0.9682072658164829) 68%);
             }
-            
+
             &::placeholder{
               font-size: $font-smaller;
               color: $black-clr;
@@ -312,6 +312,26 @@ footer.footer{
 .footer__left-box{
   margin-top: 3.7rem;
 }
+
+ul.footer__link{
+  border-color: transparent;
+  border-style: solid;
+  border-width: thin;
+  transition: all .3s;
+
+    &:hover{
+      border-left-color: $white-clr;
+      border-bottom-color: $white-clr;
+      box-shadow: -4px 4px 18px -6px $white-clr;
+    }
+
+    &:active{
+      background-color: darken($purple-clr, 8%);
+      border-top-color: $white-clr;
+      border-right-color: $white-clr;
+    }
+}
+
 
 .footer__bottom-text{
   margin-top: 14.9rem;
@@ -411,12 +431,13 @@ footer.footer .footer__right-box{
 div.nav__links-box .nav__links-list .nav__link a:hover{
   border-top: 0.1px solid $white-clr;
   border-bottom: 0.1px solid $white-clr;
+  box-shadow: -1px 16px 21px -17px $white-clr;
 }
 
 div.nav__links-box .nav__links-list .nav__link a:active{
   background-color: darken($purple-clr, 5%);
   border: 0.1px solid transparent;
-  box-shadow: 0px 3px 22px -10px rgba($white-clr,1);
+  box-shadow: 0px 3px 22px -10px $white-clr;
 }
 
 //------------on-load animations-----
