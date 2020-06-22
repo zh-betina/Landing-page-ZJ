@@ -1,0 +1,48 @@
+//----------colors:
+$purple-clr: #8A0083;
+$white-clr: #fff;
+$black-clr: #000;
+$grey-clr: #E3DBDB;
+
+//---------fonts:
+$font-family-main: 'Roboto', sans-serif;
+$font-smaller: 1.6rem;
+$font-small: 1.8rem;
+$font-medium: 2.4rem;
+$font-large: 3.6rem;
+$font-larger: 3.8rem;
+$font-maxi: 4rem;
+
+//----------icons size:
+$small-icon: 2rem;
+$large-icon: 3.2rem;
+
+//---------flexbox settings var:
+$flex-col: column;
+$flex-row: row;
+
+
+//-----------mixins:
+@mixin flex($dir){
+  display: flex;
+  flex-direction: $dir;
+}
+
+@mixin after($z-index, $width, $height, $top, $left){
+  content: "";
+  display: inline-block;
+  height: $height;
+  width: $width;
+  position: absolute;
+  transition: all .3s;
+  z-index: $z-index;
+  top: $top;
+  left: $left;
+}
+
+@mixin btn-config($bgr-clr, $txt-clr){
+  background-color: $bgr-clr;
+  color: $txt-clr;
+  position: relative;
+  z-index: 5;
+}
