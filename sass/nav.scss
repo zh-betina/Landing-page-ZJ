@@ -33,9 +33,9 @@ nav.nav{
     }
 }
 
-.nav__links-list ul:first-child,
-.nav__links-list ul:nth-child(2),
-.nav__links-list ul:nth-child(3){
+.nav__links-list li:first-child,
+.nav__links-list li:nth-child(2),
+.nav__links-list li:nth-child(3){
   margin-right: 3rem;
 
 }
