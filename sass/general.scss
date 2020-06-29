@@ -39,11 +39,11 @@ body{
 
 }
 
-.btn-purple{
+.btn--purple{
   @include btn-config($purple-clr, $white-clr);
 }
 
-.btn-white{
+.btn--white{
   @include btn-config($white-clr, $purple-clr);
 }
 //lists
@@ -63,23 +63,23 @@ body{
 
 //text
 
-.text-uppercase{
+.text--uppercase{
   text-transform: uppercase;
 }
 
-.text-dark{
+.text--dark{
   color: $black-clr;
 }
 
 //on-hover and active states
 
-.btn-purple::after{
+.btn--purple::after{
   @include after(-3, 0, 100%, 0, 0);
   background-color: $white-clr;
   border-radius: 3rem;
 }
 
-.btn-white::after{
+.btn--white::after{
   @include after(-3, 0, 100%, 0, 0);
   background-color: $purple-clr;
   border-radius: 3rem;
@@ -89,29 +89,29 @@ body{
   cursor: pointer;
 }
 
-.btn-purple:hover{
+.btn--purple:hover{
   color: $black-clr;
 }
 
-.btn-white:hover{
+.btn--white:hover{
   color: $white-clr;
 }
 
-.btn-purple:hover::after,
-.btn-white:hover::after{
+.btn--purple:hover::after,
+.btn--white:hover::after{
   width: 100%;
   height: 100%;
 }
 
-.btn-purple:active::after,
-.btn-white:active::after{
+.btn--purple:active::after,
+.btn--white:active::after{
   transform: scaleX(1) scaleY(0);
 }
 
-.btn-purple:active::after{
+.btn--purple:active::after{
   background-color: darken($purple-clr, 8%);
 }
 
-.btn-white:active::after{
+.btn--white:active::after{
   background-color: lighten($white-clr, 8%);
 }
