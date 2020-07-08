@@ -4,7 +4,7 @@
   "description": "Landing Page",
   "main": "index.js",
   "scripts": {
-    "sass-comp": "node-sass sass/main.scss css/style.css"
+    "sass-comp": "node-sass sass/general.scss css/style.css"
   },
   "author": "Betina",
   "license": "ISC",

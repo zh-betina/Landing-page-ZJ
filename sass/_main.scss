@@ -1,0 +1,62 @@
+main.main{
+  height: 66.4rem;
+
+    .form__subscribe{
+      @include flex($flex-col);
+      justify-content: center;
+      align-items: center;
+      margin-top: 34.4rem;
+
+        h2.form__subscribe--heading{
+          font-size: $font-larger;
+          font-weight: bold;
+        }
+
+        label.form__label--text-p{
+          font-size: $font-medium;
+          font-weight: 300;
+          margin-top: 1.8rem;
+        }
+
+        div input.form__input{
+          background-color: $grey-clr;
+          padding: 0.2rem 1rem;
+          border-style: solid;
+          border-width: thin;
+          border-color: darken($grey-clr, 4%);
+          color: $black-clr;
+          width: 37.5rem;
+          height: 4.1rem;
+          border-radius: 0.8rem;
+          margin-right: 4rem;
+
+            &:focus{
+              background: linear-gradient(90deg, rgba(138,0,131,.5) 7%,
+              rgba(172,137,170,1) 30%,
+              rgba(255,255,255,0.9682072658164829) 68%);
+            }
+
+            &:valid{
+              background: linear-gradient(90deg, rgba(0,138,10,0.6124649688977153) 7%,
+              rgba(109,167,114,0.5508403190377713) 30%,
+              rgba(255,255,255,0.9682072658164829) 68%);
+            }
+
+            &::placeholder{
+              font-size: $font-smaller;
+              color: $black-clr;
+              text-align: center;
+            }
+        }
+    }
+}
+
+.form__subscribe-input-box{
+  display: inline-block;
+  margin-top: 4.2rem;
+
+    .form__btn{
+      width: 20.3rem;
+      border-color: $purple-clr;
+    }
+}
