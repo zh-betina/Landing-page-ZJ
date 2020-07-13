@@ -41,7 +41,6 @@ h1.header__text{
   .header__btn{
     width: 22rem;
     box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
-;
   }
 
   button:first-child{
@@ -52,3 +51,40 @@ h1.header__text{
     background-color: transparent;
   }
 }
+
+//screens 1194 x 1532
+@media (min-width: 835px) and (max-width: 1194px){
+  header.header{
+    height: 41.8rem;
+
+      .header__text{
+        position: relative;
+        top: -1.4rem;
+        font-size: $font-larger-md-q;
+      }
+
+      .header__btn{
+        width: 18.3rem;
+      }
+
+      .header__box{
+        width: 66.8rem;
+        margin-top: 30.1rem;
+        align-self: center;
+
+          .header__buttons-box{
+            position: relative;
+            top: -4.7rem;
+            height: 10.2rem;
+            margin-left: 12.4rem;
+          }
+
+          .header__img{
+            height: 44.7rem;
+            img{
+              margin-top: -12.5rem;
+            }
+          }
+      }
+    }
+  }

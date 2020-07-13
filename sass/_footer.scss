@@ -95,3 +95,33 @@ div.footer__left-box .footer__links-list .footer__link:active{
   border-top-color: $white-clr;
   border-right-color: $white-clr;
 }
+
+//screens 1194 x 1532
+@media (min-width: 835px) and (max-width: 1194px){
+  footer.footer{
+    min-height: 22.3rem;
+    padding-top: 3.8rem;
+  }
+
+  .footer__links-list,
+  .footer__bottom-text{
+    font-size: $font-small-md-q;
+  }
+
+  div .footer_map{
+    top: -4.6rem;
+  }
+  .footer__map,
+  .footer__map--canvas{
+    height: 23.8rem;
+    width: 30.3rem;
+  }
+
+  .footer__map--canvas {
+    border-radius: 1.7rem;
+  }
+
+  footer.footer .footer__right-box{
+    font-size: $font-smaller-md-q;
+  }
+}

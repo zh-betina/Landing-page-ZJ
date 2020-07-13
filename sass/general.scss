@@ -7,7 +7,7 @@
 
 //general styling:
 
-html, body, button, nav{
+html, body, button, nav, h2{
   margin: 0;
   padding: 0;
 }
@@ -112,4 +112,13 @@ body{
 
 .btn--white:active::after{
   background-color: lighten($white-clr, 8%);
+}
+
+//screens 1194 x 1532
+
+@media (min-width: 835px) and (max-width: 1194px){
+  .btn{
+    font-size: $font-medium-md-q;
+    height: 3.8rem;
+  }
 }

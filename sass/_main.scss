@@ -60,3 +60,40 @@ main.main{
       border-color: $purple-clr;
     }
 }
+
+//screens 1194 x 1532
+@media (min-width: 835px) and (max-width: 1194px){
+  main.main{
+    height: 55.2rem;
+
+      .form__subscribe{
+        margin-top: 23.7rem;
+
+          h2.form__subscribe--heading{
+            font-size: $font-large-2-md-q;
+            margin-top: 4.8rem;
+          }
+
+          label.form__label--text-p{
+            font-size: $font-medium-md-q;
+          }
+
+          div input.form__input{
+            width: 28.9rem;
+            height: 2.8rem;
+
+              &::placeholder{
+                font-size: $font-smaller-md-q;
+              }
+          }
+      }
+  }
+
+  .form__subscribe-input-box{
+    margin-top: 3.2rem;
+
+      .form__btn{
+        width: 16.9rem;
+      }
+  }
+}
