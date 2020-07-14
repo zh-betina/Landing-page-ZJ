@@ -81,23 +81,24 @@ h1.header__text{
 
           .header__img{
             height: 44.7rem;
-            img{
-              margin-top: -12.5rem;
-            }
+              img{
+                margin-top: -12.5rem;
+              }
           }
       }
     }
   }
 
   //screens 834 x 1501
-  @media (min-width: 414px) and (max-width: 900px){
+  @media (min-width: 413px) and (max-width: 834px){
+
     header.header{
-      height: 21.3rem;
-      padding-top: 16rem;
+      height: 37.3rem;
+      padding-top: 0;
 
       .header__box{
         width: 47rem;
-        margin-top: 40.6rem;
+        margin-top: 38.4rem;
 
         .header__text{
           font-size: 2.3rem;
@@ -107,6 +108,7 @@ h1.header__text{
         .header__buttons-box{
           width: 32.2rem;
           margin-left: 7.7rem;
+          padding-top: 1.2rem;
           top: -26.9rem;
 
             .header__btn{
@@ -114,15 +116,14 @@ h1.header__text{
             }
         }
       .header__img{
-        margin-top: -29.2rem;
+        margin-top: 1.7rem;
         position: relative;
-        top: 12.5rem;
+        top: 3.8rem;
 
           img{
             height: 31.3rem;
           }
       }
-
-      }
     }
   }
+}

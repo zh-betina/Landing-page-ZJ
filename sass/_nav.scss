@@ -115,10 +115,11 @@ div.nav__links-box .nav__links-list .nav__link a:active{
 }
 
 //screens 834 x 1501
-@media (min-width: 414px) and (max-width: 900px){
+@media (min-width: 414px) and (max-width: 834px){
   nav.nav{
     padding-top: 2.5rem;
     padding-left: 8.9rem;
+    padding-right: 15.8rem;
 
       .nav__menu--icon-box{
         //visibility: visible;
@@ -128,6 +129,9 @@ div.nav__links-box .nav__links-list .nav__link a:active{
         font-size: $font-logo;
         margin-left: -22.8rem;
         padding-left: 0;
+        margin-left: 0;
+        position: absolute;
+        left: 13.33rem;
       }
 
   }
