@@ -5,6 +5,15 @@ nav.nav{
   padding: 4.4rem 20.8rem 4.4rem 9rem;
   max-width: 100vw;
 
+    .nav__menu--icon-box{
+      //visibility: none;
+      margin-left: .7rem;
+      margin-top: -.5rem;
+      .nav__menu--icon{
+        font-size: $font-hamb-menu-icon;
+      }
+    }
+
     .nav__logo--text{
       color: $white-clr;
       font-size: $font-large;
@@ -29,6 +38,17 @@ nav.nav{
           padding: 1.2rem;
           border: 0.1px solid transparent;
           outline: 0;
+        }
+    }
+    .nav__links--close-box{
+      visibility: hidden;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 12.18rem;
+        .nav__links--close-cross{
+          font-size: 5.3rem;
+          font-weight: 300;
         }
     }
 }
@@ -91,5 +111,62 @@ div.nav__links-box .nav__links-list .nav__link a:active{
 
   .nav__button{
     width: 14.2rem;
+  }
+}
+
+//screens 834 x 1501
+@media (min-width: 414px) and (max-width: 900px){
+  nav.nav{
+    padding-top: 2.5rem;
+    padding-left: 8.9rem;
+
+      .nav__menu--icon-box{
+        //visibility: visible;
+      }
+
+      .nav__logo--text{
+        font-size: $font-logo;
+        margin-left: -22.8rem;
+        padding-left: 0;
+      }
+
+  }
+
+
+
+
+//-----------menu window-----------------
+  .nav__links-box{
+    display: none;
+    padding: 0;
+    position: absolute;
+    background-color: $purple-clr;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    height: 100%;
+      .nav__links-list{
+          @include flex($flex-col);
+          padding-top: 18rem;
+
+            .nav__link{
+              font-size: $font-hamb-menu;
+              margin-bottom: 3.7rem;
+              text-align: center;
+              margin-right: 0;
+            }
+      }
+
+      .nav__links--close-box{
+        visibility: visible;
+      }
+  }
+
+  .nav__button{
+    margin-top: .1rem;
+    width: 10.2rem;
   }
 }

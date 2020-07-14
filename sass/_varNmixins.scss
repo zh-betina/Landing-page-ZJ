@@ -13,18 +13,24 @@ $font-large: 3.6rem;
 $font-larger: 3.8rem;
 $font-maxi: 4rem;
 
-//-----fonts-media-queries:
+//-----fonts-media-queries(1194 x 1532):
 $font-smaller-md-q: 1.3rem;
 $font-small-md-q: 1.5rem;
 $font-medium-md-q: 2rem;
 $font-large-md-q: 3rem;
-$font-large-2-md-q: 3.2rem; /// larger
-$font-larger-md-q: 3.4rem; //maxi
+$font-larger-md-q: 3.2rem;
+$font-maxi-md-q: 3.4rem;
+
+//-----fonts-media-queries()
+$font-hamb-menu: 2.3rem;
+$font-hamb-menu-icon: 2.7rem;
+
+$font-logo: 2.1rem;
 
 //----------icons size:
 $small-icon: 2rem;
 $large-icon: 3.2rem;
-//----------icons size media-queries:
+//----------icons size media-queries(1194 x 1532):
 $small-icon-md-q: 1.7rem;
 $large-icon-md-q: 2.7rem;
 //---------flexbox settings var:

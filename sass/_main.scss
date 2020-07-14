@@ -70,7 +70,7 @@ main.main{
         margin-top: 23.7rem;
 
           .form__subscribe--heading{
-            font-size: $font-large-2-md-q;
+            font-size: $font-maxi-md-q;
             margin-top: 4.8rem;
           }
 
@@ -96,4 +96,9 @@ main.main{
         width: 16.9rem;
       }
   }
+}
+
+//screens 834 x 1501
+@media (min-width: 414px) and (max-width: 900px){
+  
 }
