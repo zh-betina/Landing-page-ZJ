@@ -2,7 +2,7 @@ footer.footer{
   @include flex($flex-row);
   background-color: $purple-clr;
   justify-content: space-around;
-  height: 37rem;
+  min-height: 37rem;
   padding: 5rem 15.2rem 0 9.1rem;
 
     .footer__links-list ul:first-child,
@@ -20,6 +20,7 @@ li.footer__link{
   border-style: solid;
   border-width: thin;
   transition: all .3s;
+  cursor: pointer;
 }
 
 
@@ -73,6 +74,7 @@ footer.footer .footer__right-box{
 .footer__fb-icon{
   font-size: $large-icon;
   position: relative;
+  cursor: pointer;
 }
 
 .social-med__icon::after{
@@ -99,8 +101,25 @@ div.footer__left-box .footer__links-list .footer__link:active{
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
   footer.footer{
-    min-height: 22.3rem;
+    min-height: 28rem;
     padding-top: 3.8rem;
+
+      .footer__right-box{
+        font-size: $font-smaller-md-q;
+        margin-top: 1.6rem;
+
+        .footer__text{
+          margin-bottom: 1.8rem;
+        }
+
+        p{
+          margin-top: 1.7rem;
+        }
+      }
+
+      .footer__left-box{
+        margin-top: 2.9rem;
+      }
   }
 
   .footer__links-list,
@@ -121,7 +140,15 @@ div.footer__left-box .footer__links-list .footer__link:active{
     border-radius: 1.7rem;
   }
 
-  footer.footer .footer__right-box{
-    font-size: $font-smaller-md-q;
+  //----------icons
+
+  .footer__map-icon,
+  .footer__phone-icon{
+    font-size: $small-icon-md-q;
+  }
+
+  .footer__twitter-icon,
+  .footer__fb-icon{
+    font-size: $large-icon-md-q;
   }
 }

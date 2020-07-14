@@ -16,8 +16,6 @@ $font-maxi: 4rem;
 //-----fonts-media-queries:
 $font-smaller-md-q: 1.3rem;
 $font-small-md-q: 1.5rem;
-//1.7rem; map pointer, phone
-//2.7rem social icons
 $font-medium-md-q: 2rem;
 $font-large-md-q: 3rem;
 $font-large-2-md-q: 3.2rem; /// larger
@@ -26,7 +24,9 @@ $font-larger-md-q: 3.4rem; //maxi
 //----------icons size:
 $small-icon: 2rem;
 $large-icon: 3.2rem;
-
+//----------icons size media-queries:
+$small-icon-md-q: 1.7rem;
+$large-icon-md-q: 2.7rem;
 //---------flexbox settings var:
 $flex-col: column;
 $flex-row: row;

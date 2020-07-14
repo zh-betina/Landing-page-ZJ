@@ -4,7 +4,6 @@
   "description": "Landing Page",
   "main": "index.js",
   "scripts": {
-    "sass-comp": "node-sass sass/general.scss css/style.css",
     "sass-watch": "node-sass --watch sass/general.scss -o css/",
     "live-dev": "live-server",
     "start": "npm run live-dev"
