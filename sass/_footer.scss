@@ -1,7 +1,8 @@
 footer.footer{
   background-color: $purple-clr;
   min-height: 37rem;
-  padding: 5rem 15.2rem 0 9.1rem;
+  width: 100vw;
+  padding: 4.2rem 15.2rem 0 3.8rem;
 
     .footer__wrapper{
       @include flex($flex-row);
@@ -9,6 +10,7 @@ footer.footer{
 
         .footer__left-box{
           margin-top: 3.7rem;
+          line-height: 3.4rem;
 
             .footer__links-list ul:first-child,
             .footer__links-list ul:nth-child(2){
@@ -19,7 +21,8 @@ footer.footer{
         .footer__right-box{
           font-size: $font-smaller;
           text-align: left;
-          margin-top: 3.3rem;
+          margin-top: 2rem;
+          margin-left: -7.6rem;
 
             .footer__text{
               margin-bottom: 2.8rem;
@@ -53,7 +56,7 @@ li.footer__link{
 }
 
 .footer__bottom-text{
-  margin-top: 14.9rem;
+  margin-top: -2.4rem;
 }
 
 .footer__links-list,
