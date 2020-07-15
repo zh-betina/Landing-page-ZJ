@@ -102,6 +102,7 @@ main.main{
 @media (min-width: 414px) and (max-width: 834px){
   main.main{
     height: 38.9rem;
+
       .form__subscribe{
         margin-top: 20.2rem;
 
@@ -132,6 +133,45 @@ main.main{
           width: 11.7rem;
           height: 2.7rem;
         }
+    }
+  }
+}
+
+//screens 414 x 1362
+
+@media (max-width: 414px){
+  main.main{
+    height: 28.9rem;
+    
+    .form__subscribe{
+      margin-top: 14.4rem;
+
+      .form__subscribe--heading{
+        font-size: 2.2rem;
+      }
+
+      label.form__label--text-p{
+        font-size: 1.4rem;
+      }
+
+      div input.form__input{
+        width: 19.5rem;
+        height: 1.8rem;
+        margin-left: 1.6rem;
+        margin-right: 2.3rem;
+        padding-right: 0;
+
+          &::placeholder{
+
+          }
+      }
+    }
+
+    .form__subscribe-input-box{
+      .form__btn{
+        height: 2.7rem;
+        width: 11.7rem;
+      }
     }
   }
 }

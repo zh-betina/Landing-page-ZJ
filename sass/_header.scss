@@ -1,10 +1,13 @@
 header.header{
   @include flex($flex-col);
-  background-color: $purple-clr;
+  align-self: center;
+  align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: $purple-clr;
   padding-top: 13.1rem;
   height: 54.9rem;
+  width: 100vw;
 
   .header__box{
     width: 80.6rem;
@@ -56,6 +59,7 @@ h1.header__text{
 @media (min-width: 835px) and (max-width: 1194px){
   header.header{
     height: 41.8rem;
+    width: 100vw;
 
       .header__text{
         position: relative;
@@ -95,6 +99,7 @@ h1.header__text{
     header.header{
       height: 37.3rem;
       padding-top: 0;
+      width: 100vw;
 
       .header__box{
         width: 47rem;
@@ -124,6 +129,43 @@ h1.header__text{
           img{
             height: inherit;
           }
+      }
+    }
+  }
+}
+
+//screens 414 x 1362
+
+@media (max-width: 414px){
+  header.header{
+    padding-top: 0;
+    margin-top: 0;
+    height: 31.2rem;
+
+    .header__box{
+      width: 35.3rem;
+      margin-top: 16.4rem;
+
+      .header__text{
+        font-size: 1.9rem;
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      .header__buttons-box{
+        align-self: center;
+        margin-left: auto;
+        padding-top: .8rem;
+
+        .header__btn{
+          width: 10rem;
+          height: 2.1rem;
+        }
+      }
+
+      .header__img{
+        margin-top: 5.9rem;
+        height: 23.7rem;
       }
     }
   }

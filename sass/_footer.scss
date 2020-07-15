@@ -219,3 +219,44 @@ div.footer__left-box .footer__links-list .footer__link:active{
       }
   }
 }
+
+//screens 414 x 1362
+
+@media (max-width: 414px){
+  footer.footer{
+    padding: 0;
+
+      .footer__wrapper{
+        @include flex($flex-col);
+        width: 100vw;
+
+          .footer__left-box{
+            text-align: right;
+            margin-top: 3.6rem;
+            margin-right: .9rem;
+            padding-bottom: 4.7rem;
+            line-height: 3.3rem;
+          }
+
+          .footer__right-box{
+            margin-left: 5.9rem;
+          }
+
+          .footer__map{
+            align-self: center;
+            height: 24rem;
+            width: 30.6rem;
+
+              #footer__map--canvas{
+                height: 24rem;
+                width: 30.6rem;
+              }
+          }
+      }
+
+      .footer__bottom-text{
+        margin-top: 6.2rem;
+        text-align: center;
+      }
+    }
+}

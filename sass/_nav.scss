@@ -82,6 +82,43 @@ div.nav__links-box .nav__links-list .nav__link a:active{
   box-shadow: 0 3px 22px -10px $white-clr;
 }
 
+//-----------menu window-----------------
+@media (min-width: 0px) and (max-width: 834px){
+  .nav__links-box{
+    display: none;
+    padding: 0;
+    position: absolute;
+    background-color: $purple-clr;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    height: 100%;
+      .nav__links-list{
+          @include flex($flex-col);
+          padding-top: 18rem;
+
+            .nav__link{
+              font-size: $font-hamb-menu;
+              margin-bottom: 3.7rem;
+              text-align: center;
+              margin-right: 0;
+            }
+      }
+
+      .nav__links--close-box{
+        visibility: visible;
+      }
+  }
+
+  .nav__button{
+    margin-top: .1rem;
+    width: 10.2rem;
+  }
+}
+
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
   nav.nav {
@@ -116,11 +153,9 @@ div.nav__links-box .nav__links-list .nav__link a:active{
 }
 
 //screens 834 x 1501
-@media (min-width: 414px) and (max-width: 834px){
+@media (min-width: 415px) and (max-width: 834px){
   nav.nav{
-    padding-top: 2.5rem;
-    padding-left: 8.9rem;
-    padding-right: 15.8rem;
+    padding: 2.5rem 0 2.5rem 0;
 
       .nav__menu--icon-box{
         visibility: visible;
@@ -128,50 +163,37 @@ div.nav__links-box .nav__links-list .nav__link a:active{
 
       .nav__logo--text{
         font-size: $font-logo;
-        margin-left: -22.8rem;
+        margin-left: -21.6rem;
         padding-left: 0;
-        margin-left: 0;
-        position: absolute;
-        left: 13.33rem;
+        //position: absolute;
+        //left: 13.33rem;
       }
 
+      .nav__button{
+        right: 2.5rem;
+        margin-right: 0;
+      }
   }
+}
 
+//screens 414 x 1362
 
+@media (max-width: 414px){
+  nav.nav{
+    padding: 1.3rem 0 1.3rem .5rem;
 
-
-//-----------menu window-----------------
-  .nav__links-box{
-    display: none;
-    padding: 0;
-    position: absolute;
-    background-color: $purple-clr;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    height: 100%;
-      .nav__links-list{
-          @include flex($flex-col);
-          padding-top: 18rem;
-
-            .nav__link{
-              font-size: $font-hamb-menu;
-              margin-bottom: 3.7rem;
-              text-align: center;
-              margin-right: 0;
-            }
-      }
-
-      .nav__links--close-box{
+      .nav__menu--icon-box{
         visibility: visible;
       }
-  }
-
-  .nav__button{
-    margin-top: .1rem;
-    width: 10.2rem;
+      .nav__logo{
+        .nav__logo--text{
+          position: relative;
+          font-size: $font-logo;
+          left: -2.6rem;
+        }
+      }
+      .nav__button{
+        margin-right: 2.1rem;
+      }
   }
 }
