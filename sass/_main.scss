@@ -100,5 +100,38 @@ main.main{
 
 //screens 834 x 1501
 @media (min-width: 414px) and (max-width: 834px){
+  main.main{
+    height: 38.9rem;
+      .form__subscribe{
+        margin-top: 20.2rem;
 
+          .form__subscribe--heading{
+            font-size: 2.2rem;
+          }
+
+          label.form__label--text-p{
+            margin-top: 1.1rem;
+            font-size: 1.4rem;
+          }
+
+          div input.form__input{
+            width: 19.6rem;
+            height: 1.8rem;
+            margin-right: 1.7rem;
+
+              &::placeholder{
+                font-size: .9rem;
+              }
+          }
+    }
+
+    .form__subscribe-input-box{
+      margin-top: 2.2rem;
+
+        .form__btn{
+          width: 11.7rem;
+          height: 2.7rem;
+        }
+    }
+  }
 }
