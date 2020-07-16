@@ -12,7 +12,7 @@ nav.nav{
     }
   }
 
-  .nav__links-box{
+  .nav__menu--box{
     @include flex($flex-row);
     justify-content: space-between;
     max-width: 49.3rem;
@@ -20,42 +20,42 @@ nav.nav{
     padding-left: 5.3rem;
     padding-right: 2.6rem;
 
-    .nav__menu--icon-box{
-      visibility: visible;
-      position: absolute;
-      top: .95rem;
-      left: 4.71rem;
+      .nav__links--box{
+        position: absolute;
+        top: .95rem;
+        left: 0;
 
-        .nav__menu--icon{
-          font-size: $font-hamb-menu-icon;
-          transition: all .4s;
-        }
-        .nav__links-list .nav__link{
-          display: inline-block;
-          font-size: $font-smaller;
+          .nav__links--close-box{
+            visibility: hidden;
+            z-index: 11;
+            position: absolute;
+            top: -.5rem;
+            left: 5.2rem;
 
-            a {
-              transition: all .6s;
-              padding: 1.2rem;
-              border: 0.1px solid transparent;
-              outline: 0;
-            }
-        }
-    }
+              .nav__links--close-cross{
+                font-size: 5.3rem;
+                font-weight: 300;
+              }
+          }
 
-    .nav__links--close-box{
-      visibility: hidden;
-      z-index: 10;
-      position: absolute;
-      top: 10.6rem;
-      left: 0;
+          .nav__menu--icon{
+            visibility: hidden;
+            font-size: $font-hamb-menu-icon;
+            transition: all .4s;
+          }
 
-        .nav__links--close-cross{
-          font-size: 5.3rem;
-          font-weight: 300;
-        }
+          .nav__links-list .nav__link{
+            display: inline-block;
+            font-size: $font-smaller;
 
-    }
+              a {
+                transition: all .6s;
+                padding: 1.2rem;
+                border: 0.1px solid transparent;
+                outline: 0;
+              }
+          }
+      }
 }
 
 .nav__links-list li:first-child,
@@ -71,28 +71,34 @@ nav.nav{
   margin-right: -6.4rem;
 }
 
-.test{
-  background-color: red;
-  visibility: hidden;
-}
 //on hover and active states
 
-div.nav__links-box .nav__menu--icon-box .nav__links-list .nav__link a:hover{
+div.nav__links--box .nav__links-list .nav__link a:hover{
   border-top: 0.1px solid $white-clr;
   border-bottom: 0.1px solid $white-clr;
   box-shadow: -1px 16px 21px -17px $white-clr;
 }
 
-div.nav__links-box .nav__menu--icon-box .nav__links-list .nav__link a:active{
+div.nav__links--box .nav__links-list .nav__link a:active{
   background-color: darken($purple-clr, 5%);
   border: 0.1px solid transparent;
   box-shadow: 0 3px 22px -10px $white-clr;
 }
 
-.nav__menu--icon-box:hover
+.nav__links--box:hover
 .nav__links-list{
   visibility: visible;
 }
+
+.nav__links--box:hover
+.nav__links--close-box{
+  visibility: visible;
+}
+.nav__links--close-box:hover{
+  cursor: pointer;
+}
+
+
 
 
 //-----------menu window-----------------
@@ -101,35 +107,44 @@ div.nav__links-box .nav__menu--icon-box .nav__links-list .nav__link a:active{
     @include flex($flex-col);
     visibility: hidden;
     align-content: center;
-    box-sizing: border-box;
     background-color: $purple-clr;
-    padding-top: 25.6rem;
+    padding-top: 0;
     position: absolute;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     line-height: 6.5rem;
-    top: -8.4rem;
+    top: -1.2rem;
     left: 0;
+   }
 
-      li.nav__link{
-        font-size: $font-hamb-menu;
-        text-align: center;
-        margin-right: 0;
+   .nav__menu--box{
+     .nav__links--box{
+       .nav__links-list{
+         .nav__link{
+           font-size: $font-hamb-menu;
+           text-align: center;
+           margin-right: 0;
+         }
+       }
       }
     }
-
-        .nav__links--close-box{
-          visibility: hidden;
-        }
 
         .nav__button{
           margin-top: .1rem;
           width: 10.2rem;
         }
-}
+
+        .nav__menu--box{
+          .nav__links--box{
+            .nav__menu--icon{
+              visibility: visible;
+            }
+          }
+        }
+  }
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
   nav.nav {
