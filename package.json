@@ -4,9 +4,10 @@
   "description": "Landing Page",
   "main": "index.js",
   "scripts": {
+    "sass-update": "node-sass sass/general.scss css/style.css",
     "sass-watch": "node-sass --watch sass/general.scss -o css/",
     "live-dev": "live-server",
-    "start": "npm run live-dev"
+    "start": "npm run sass-update && npm run live-dev"
   },
   "author": "Betina",
   "license": "ISC",
