@@ -27,7 +27,6 @@ nav.nav{
         .nav__menu--icon{
           visibility: hidden;
           font-size: $font-hamb-menu-icon;
-          transition: all .4s;
           }
     }
 }
@@ -105,7 +104,7 @@ nav.nav{
   transform: scale(0);
 }
 
-//-----------menu window-----------------
+//-----------hamburger menu window-----------------
 @media (min-width: 0px) and (max-width: 834px){
   .nav__links-list{
     @include flex($flex-col);
@@ -217,7 +216,7 @@ nav.nav{
 
       .nav__logo{
         .nav__logo--text{
-          font-size: $font-logo;
+          font-size: $font-large-md-q-2;
           padding-left: 0;
           position: absolute;
           left: 7.98rem;
@@ -238,14 +237,28 @@ nav.nav{
 }
 
 //screens 414 x 1362
-@media (max-width: 414px){
+@media (min-width: 0) and (max-width: 414px){
   nav.nav{
-    padding: 1.3rem 0 1.3rem .5rem;
+    padding: 2.4rem 0 1.3rem .5rem;
 
       .nav__logo{
+        margin-left: 5.6rem;
+
         .nav__logo--text{
-          font-size: $font-logo;
+          font-size: $font-large-md-q-2;
         }
+      }
+
+      .nav__menu--box{
+        padding: 0;
+
+          .nav__links--box{
+            .nav__menu--icon{
+              position: absolute;
+              left: 2.87rem;
+              top: 1.9rem;
+            }
+          }
       }
       .nav__button{
         margin-right: 2.1rem;

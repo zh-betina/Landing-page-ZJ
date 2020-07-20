@@ -21,8 +21,7 @@ footer.footer{
         .footer__right-box{
           font-size: $font-smaller;
           text-align: left;
-          margin-top: 2rem;
-          margin-left: -7.6rem;
+          margin: 2rem 0 0 -7.6rem;
 
             .footer__text{
               margin-bottom: 2.8rem;
@@ -35,22 +34,19 @@ footer.footer{
           height: 28.8rem;
           width: 36.6rem;
 
-                #footer__map--canvas{
-                  border-radius: 2rem;
-                  width: 36.8rem;
-                  height: 28.6rem;
-                  overflow: hidden;
-                  background: none;
-                }
+            #footer__map--canvas{
+              border-radius: 2rem;
+              width: 36.8rem;
+              height: 28.6rem;
+              overflow: hidden;
+              background: none;
+            }
         }
     }
 }
 
-
 li.footer__link{
-  border-color: transparent;
-  border-style: solid;
-  border-width: thin;
+  border: thin solid transparent;
   transition: all .3s;
   cursor: pointer;
 }
@@ -85,8 +81,7 @@ li.footer__link{
 
 .social-med__icon::after{
   @include after(-4, 110%, 110%, 0, 0);
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid;
   padding: 0.5rem;
 }
 
@@ -115,13 +110,13 @@ div.footer__left-box .footer__links-list .footer__link:active{
           font-size: $font-smaller-md-q;
           margin-top: 1.6rem;
 
-          .footer__text{
-            margin-bottom: 1.8rem;
-          }
+            .footer__text{
+              margin-bottom: 1.8rem;
+            }
 
-          p{
-            margin-top: 1.7rem;
-          }
+            p{
+              margin-top: 1.7rem;
+            }
         }
 
         .footer__left-box{
@@ -175,10 +170,9 @@ div.footer__left-box .footer__links-list .footer__link:active{
             line-height: 3rem;
 
               ul.footer__links-list{
-                margin-right: 3.2rem;
-                margin-top: 1.1rem;
+                margin: 1.1rem 3.2rem 0 0;
               }
-        }
+          }
 
         .footer__right-box{
           &>p{
@@ -192,8 +186,8 @@ div.footer__left-box .footer__links-list .footer__link:active{
 
         .footer__map{
           align-self: center;
-          height: 33rem;
           width: 42.2rem;
+          height: 33rem;
 
             #footer__map--canvas{
               width: 42.2rem;
@@ -235,8 +229,7 @@ div.footer__left-box .footer__links-list .footer__link:active{
 
           .footer__left-box{
             text-align: right;
-            margin-top: 3.6rem;
-            margin-right: .9rem;
+            margin: 3.6rem 4.3rem 0 0;
             padding-bottom: 4.7rem;
             line-height: 3.3rem;
           }

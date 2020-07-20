@@ -1,7 +1,5 @@
 header.header{
   @include flex($flex-col);
-  align-self: center;
-  align-content: center;
   justify-content: center;
   align-items: center;
   background-color: $purple-clr;
@@ -9,11 +7,11 @@ header.header{
   height: 54.9rem;
   width: 100vw;
 
-  .header__box{
-    width: 80.6rem;
-    margin-top: 27.2rem;
+    .header__box{
+      width: 80.6rem;
+      margin-top: 27.2rem;
+    }
   }
-}
 
 .header__img{
   height: 53.8rem;
@@ -32,27 +30,27 @@ h1.header__text{
   text-align: center;
   padding-top: 1rem;
 
-  span{
-    display: block;
-  }
+    span{
+      display: block;
+    }
 }
 
 .header__buttons-box{
   margin-left: 16.4rem;
   padding-top: 4.5rem;
 
-  .header__btn{
-    width: 22rem;
-    box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
-  }
+    .header__btn{
+      width: 22rem;
+      box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
+    }
 
-  button:first-child{
-    margin-right: 6rem;
-  }
+    button:first-child{
+      margin-right: 6rem;
+    }
 
-  button:nth-child(2){
-    background-color: transparent;
-  }
+    button:nth-child(2){
+      background-color: transparent;
+    }
 }
 
 //screens 1194 x 1532
@@ -85,6 +83,7 @@ h1.header__text{
 
           .header__img{
             height: 44.7rem;
+
               img{
                 margin-top: -12.5rem;
               }
@@ -101,25 +100,26 @@ h1.header__text{
       padding-top: 0;
       width: 100vw;
 
-      .header__box{
-        width: 47rem;
-        margin-top: 15.9rem;
+        .header__box{
+          width: 47rem;
+          margin-top: 15.9rem;
 
-        .header__text{
-          font-size: 2.3rem;
-          top: -23.5rem;
-        }
+          .header__text{
+            font-size: 2.3rem;
+            top: -23.5rem;
+          }
 
-        .header__buttons-box{
-          width: 32.2rem;
-          margin-left: 7.7rem;
-          padding-top: 1.2rem;
-          top: -26.9rem;
+          .header__buttons-box{
+            width: 32.2rem;
+            margin-left: 7.7rem;
+            padding-top: 1.2rem;
+            top: -26.9rem;
 
-            .header__btn{
-              width: 12.8rem;
-            }
-        }
+              .header__btn{
+                width: 12.8rem;
+              }
+          }
+
       .header__img{
         margin-top: 1.7rem;
         position: relative;
@@ -136,35 +136,41 @@ h1.header__text{
 
 //screens 414 x 1362
 
-@media (max-width: 414px){
+@media (min-width: 0) and (max-width: 414px){
   header.header{
     padding-top: 0;
     margin-top: 0;
     height: 31.2rem;
 
-    .header__box{
-      width: 35.3rem;
-      margin-top: 16.4rem;
+      .header__box{
+        width: 35.3rem;
+        margin-top: 16.4rem;
+        @include flex($flex-col);
+        align-items: center;
 
-      .header__text{
-        font-size: 1.9rem;
-        padding-top: 0;
-        margin-top: 0;
-      }
+          .header__text{
+            font-size: 1.9rem;
+            padding-top: 0;
+            margin-top: 0;
+          }
 
-      .header__buttons-box{
-        align-self: center;
-        margin-left: auto;
-        padding-top: .8rem;
+        .header__buttons-box{
+          @include flex($flex-row);
+          justify-content: space-between;
+          min-width: 23.4rem;
+          margin-left: 0;
+          padding-top: .8rem;
 
-        .header__btn{
-          width: 10rem;
-          height: 2.1rem;
+            .header__btn{
+              width: 10rem;
+              height: 2.1rem;
+              font-size: 1.1rem;
+              margin: 0;
+            }
         }
-      }
 
       .header__img{
-        margin-top: 5.9rem;
+        margin-top: 5.2rem;
         height: 23.7rem;
       }
     }
