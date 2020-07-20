@@ -2,7 +2,7 @@
 
 Design: Żaneta Jażdżyk (@nettecode).
 
-###Scrips:
+### Scripts:
 
 For live preview:
   1) `npm install`
