@@ -137,7 +137,7 @@ main.main{
 
 //screens 414 x 1362
 
-@media (max-width: 414px){
+@media (min-width: 0) and (max-width: 414px){
   main.main{
     height: 28.9rem;
 
