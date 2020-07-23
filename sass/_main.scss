@@ -7,7 +7,7 @@ main.main{
       align-items: center;
       margin-top: 34.4rem;
 
-        .form__subscribe--heading{
+        &--heading{
           font-size: $font-larger;
           font-weight: bold;
         }
@@ -67,7 +67,7 @@ main.main{
       .form__subscribe{
         margin-top: 23.7rem;
 
-          .form__subscribe--heading{
+          &--heading{
             font-size: $font-maxi-md-q;
             margin-top: 4.8rem;
           }
@@ -104,7 +104,7 @@ main.main{
       .form__subscribe{
         margin-top: 20.2rem;
 
-          .form__subscribe--heading{
+          &--heading{
             font-size: $font-larger-md-q-2;
           }
 
@@ -144,7 +144,7 @@ main.main{
     .form__subscribe{
       margin-top: 14.4rem;
 
-      .form__subscribe--heading{
+      &--heading{
         font-size: $font-larger-md-q-2;
       }
 

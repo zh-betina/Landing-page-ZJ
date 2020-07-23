@@ -7,7 +7,12 @@
 
 //general styling:
 
-html, body, button, nav, ul, h2{
+html,
+body,
+button,
+nav,
+ul,
+h2{
   margin: 0;
   padding: 0;
 }
@@ -31,19 +36,73 @@ body{
   font-size: $font-medium;
   border-radius: 3rem;
   height: 4.5rem;
-  border-style: solid;
-  border-width: thin;
+  border: thin solid;
   outline: 0;
 
+    &:hover{
+      cursor: pointer;
+    }
+
+    &--purple{
+      @include btn-config($purple-clr, $white-clr);
+
+      &:hover{
+        color: $black-clr;
+
+        &::after{
+          @include hover-after();
+        }
+      }
+
+      &::after{
+        @include after(-3, 0, 100%, 0, 0);
+        background-color: $white-clr;
+        border-radius: 3rem;
+      }
+
+      &:active::after{
+        @include active-after();
+        background-color: darken($purple-clr, 8%);
+      }
+    }
+
+    &--white{
+      @include btn-config($white-clr, $purple-clr);
+
+        &:hover{
+          color: $white-clr;
+
+          &::after{
+            @include hover-after();
+          }
+        }
+
+        &::after{
+          @include after(-3, 0, 100%, 0, 0);
+          background-color: $purple-clr;
+          border-radius: 3rem;
+        }
+
+        &:active::after{
+          @include active-after();
+          background-color: lighten($white-clr, 8%);
+        }
+    }
+
+    //screens 1194 x 1532
+    @media (min-width: 835px) and (max-width: 1194px){
+        font-size: $font-medium-md-q;
+        height: 3.8rem;
+    }
+
+    //screens 834 x 1501 and 414 x 1362
+    @media (min-width: 0) and (max-width: 834px){
+        font-size: $font-medium-md-q-2;
+        height: 2.4rem;
+      }
 }
 
-.btn--purple{
-  @include btn-config($purple-clr, $white-clr);
-}
 
-.btn--white{
-  @include btn-config($white-clr, $purple-clr);
-}
 //lists
 .list{
   list-style: none;
@@ -60,74 +119,12 @@ body{
 }
 
 //text
-
-.text--uppercase{
-  text-transform: uppercase;
-}
-
-.text--dark{
-  color: $black-clr;
-}
-
-//on-hover and active states
-
-.btn--purple::after{
-  @include after(-3, 0, 100%, 0, 0);
-  background-color: $white-clr;
-  border-radius: 3rem;
-}
-
-.btn--white::after{
-  @include after(-3, 0, 100%, 0, 0);
-  background-color: $purple-clr;
-  border-radius: 3rem;
-}
-
-.btn:hover{
-  cursor: pointer;
-}
-
-.btn--purple:hover{
-  color: $black-clr;
-}
-
-.btn--white:hover{
-  color: $white-clr;
-}
-
-.btn--purple:hover::after,
-.btn--white:hover::after{
-  width: 100%;
-  height: 100%;
-}
-
-.btn--purple:active::after,
-.btn--white:active::after{
-  transform: scaleX(1) scaleY(0);
-}
-
-.btn--purple:active::after{
-  background-color: darken($purple-clr, 8%);
-}
-
-.btn--white:active::after{
-  background-color: lighten($white-clr, 8%);
-}
-
-//screens 1194 x 1532
-
-@media (min-width: 835px) and (max-width: 1194px){
-  .btn{
-    font-size: $font-medium-md-q;
-    height: 3.8rem;
+.text{
+  &--uppercase{
+    text-transform: uppercase;
   }
-}
 
-//screens 834 x 1501 and 414 x 1362
-
-@media (min-width: 0) and (max-width: 834px){
-  .btn{
-    font-size: $font-medium-md-q-2;
-    height: 2.4rem;
+  &--dark{
+    color: $black-clr;
   }
 }

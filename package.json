@@ -4,15 +4,15 @@
   "description": "Landing Page",
   "main": "index.js",
   "scripts": {
-    "sass-update": "node-sass sass/general.scss css/style.css",
-    "sass-watch": "node-sass --watch sass/general.scss -o css/",
     "live-dev": "live-server",
-    "start": "npm run sass-update && npm run live-dev"
+    "sass-watch": "sass --watch sass/general.scss css/style.css",
+    "start": "npm-run-all --parallel sass-watch live-dev"
   },
   "author": "Betina",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "live-server": "^6.14.6"
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.26.10"
   }
 }

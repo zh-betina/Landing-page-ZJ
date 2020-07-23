@@ -7,11 +7,12 @@ nav.nav{
 
     .nav__logo{
       margin-left: 10.4rem;
-      .nav__logo--text{
-        color: $white-clr;
-        font-size: $font-large;
-        text-transform: capitalize;
-      }
+
+        &--text{
+          color: $white-clr;
+          font-size: $font-large;
+          text-transform: capitalize;
+        }
     }
   }
 
@@ -39,7 +40,7 @@ nav.nav{
   position: relative;
   top: -3.5rem;
 
-    .nav__links-list .nav__link{
+    &-list .nav__link{
       display: inline-block;
       font-size: $font-smaller;
 
@@ -144,7 +145,7 @@ nav.nav{
     min-height: 100vh;
     position: static;
 
-      .nav__links--close-cross{
+      &-cross{
         display: flex;
       }
 
@@ -170,7 +171,7 @@ nav.nav{
       .nav__logo{
         margin-left: 9.4rem;
 
-          .nav__logo--text{
+          &--text{
             font-size: $font-large-md-q;
             flex-wrap: nowrap;
             padding-left: 2.4rem;
@@ -215,7 +216,7 @@ nav.nav{
     padding: 2.5rem 0 2.5rem 0;
 
       .nav__logo{
-        .nav__logo--text{
+        &--text{
           font-size: $font-large-md-q-2;
           padding-left: 0;
           position: absolute;
@@ -244,7 +245,7 @@ nav.nav{
       .nav__logo{
         margin-left: 5.6rem;
 
-        .nav__logo--text{
+        &--text{
           font-size: $font-large-md-q-2;
         }
       }
