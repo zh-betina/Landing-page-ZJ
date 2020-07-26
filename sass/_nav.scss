@@ -162,15 +162,16 @@
         padding: 0;
 
         .nav__links--box{
+          $self: nav__links;
           margin-top: .7rem;
           padding-right: 0;
           padding-left: 1.3rem;
 
-            .nav__links--close-box{
+            .#{$self}--close-box{
               margin: 0 0 0 -.91rem;
               top: -3.5rem;
 
-              .nav__links-list{
+              .#{$self}-list{
                 width: 31.5rem;
                 float: left;
 
