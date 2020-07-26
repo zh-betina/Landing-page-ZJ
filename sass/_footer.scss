@@ -1,10 +1,10 @@
-footer.footer{
+.footer{
   background-color: $purple-clr;
   min-height: 37rem;
   width: 100vw;
   padding: 4.2rem 15.2rem 0 3.8rem;
 
-    .footer__wrapper{
+    &__wrapper{
       @include flex($flex-row);
       justify-content: space-around;
 
@@ -12,9 +12,29 @@ footer.footer{
           margin-top: 3.7rem;
           line-height: 3.4rem;
 
-            .footer__links-list ul:first-child,
-            .footer__links-list ul:nth-child(2){
-              margin-bottom: 1.6rem;
+            .footer__links-list{
+              font-size: $font-small;
+
+                ul{
+                  &:first-child,
+                  &:nth-child(2){
+                    margin-bottom: 1.6rem;
+                  }
+                }
+
+                .footer__link{
+                  &:hover{
+                    border-left-color: $white-clr;
+                    border-bottom-color: $white-clr;
+                    box-shadow: -4px 4px 18px -6px $white-clr;
+                  }
+
+                  &:active{
+                    background-color: darken($purple-clr, 8%);
+                    border-top-color: $white-clr;
+                    border-right-color: $white-clr;
+                  }
+                }
             }
         }
 
@@ -45,19 +65,15 @@ footer.footer{
     }
 }
 
-li.footer__link{
+.footer__link{
   border: thin solid transparent;
   transition: all .3s;
   cursor: pointer;
 }
 
 .footer__bottom-text{
-  margin-top: -2.4rem;
-}
-
-.footer__links-list,
-.footer__bottom-text{
   font-size: $font-small;
+  margin-top: -2.4rem;
 }
 
 //icons
@@ -79,33 +95,13 @@ li.footer__link{
   cursor: pointer;
 }
 
-.social-med__icon::after{
-  @include after(-4, 110%, 110%, 0, 0);
-  border: 1px solid;
-  padding: 0.5rem;
-}
-
-//on-hover and active states
-
-div.footer__left-box .footer__links-list .footer__link:hover{
-  border-left-color: $white-clr;
-  border-bottom-color: $white-clr;
-  box-shadow: -4px 4px 18px -6px $white-clr;
-}
-
-div.footer__left-box .footer__links-list .footer__link:active{
-  background-color: darken($purple-clr, 8%);
-  border-top-color: $white-clr;
-  border-right-color: $white-clr;
-}
-
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
-  footer.footer{
+  .footer{
     min-height: 28rem;
     padding-top: 3.8rem;
 
-      .footer__wrapper{
+      &__wrapper{
         .footer__right-box{
           font-size: $font-smaller-md-q;
           margin-top: 1.6rem;
@@ -157,12 +153,12 @@ div.footer__left-box .footer__links-list .footer__link:active{
 //screens 834 x 1501
 
 @media (min-width: 414px) and (max-width: 834px){
-  footer.footer{
+  .footer{
     min-height: 59.1rem;
     width: 100%;
     padding-left: 0;
 
-      .footer__wrapper{
+      &__wrapper{
         flex-wrap: wrap;
 
           .footer__left-box{
@@ -172,6 +168,22 @@ div.footer__left-box .footer__links-list .footer__link:active{
               ul.footer__links-list{
                 margin: 1.1rem 3.2rem 0 0;
               }
+          }
+
+          & div{
+            &:first-child{
+              order: 2;
+              flex-basis: 50%;
+            }
+
+            &:nth-child(2){
+              order: 1;
+            }
+
+            &:nth-child(3){
+              order: 3;
+              flex-basis: 50%;
+            }
           }
 
         .footer__right-box{
@@ -200,30 +212,16 @@ div.footer__left-box .footer__links-list .footer__link:active{
         margin-top: 5.7rem;
         text-align: center;
       }
-
-      .footer__wrapper div:first-child{
-        order: 2;
-        flex-basis: 50%;
-      }
-
-      .footer__wrapper div:nth-child(2){
-        order: 1;
-      }
-
-      .footer__wrapper div:nth-child(3){
-        order: 3;
-        flex-basis: 50%;
-      }
   }
 }
 
 //screens 414 x 1362
 
 @media (min-width: 0) and (max-width: 414px){
-  footer.footer{
+  .footer{
     padding: 0;
 
-      .footer__wrapper{
+      &__wrapper{
         @include flex($flex-col);
         width: 100vw;
 
@@ -250,9 +248,9 @@ div.footer__left-box .footer__links-list .footer__link:active{
           }
       }
 
-      .footer__bottom-text{
+      &__bottom-text{
         margin-top: 6.2rem;
         text-align: center;
       }
     }
-}
+  }
