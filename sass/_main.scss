@@ -1,4 +1,4 @@
-main.main{
+.main{
   height: 66.4rem;
 
     .form__subscribe{
@@ -12,13 +12,23 @@ main.main{
           font-weight: bold;
         }
 
-        label.form__label--text-p{
+        &-input-box{
+          display: inline-block;
+          margin-top: 4.2rem;
+
+            .form__btn{
+              width: 20.3rem;
+              border-color: $purple-clr;
+            }
+        }
+
+        .form__label--text-p{
           font-size: $font-medium;
           font-weight: 300;
           margin-top: 1.8rem;
         }
 
-        div input.form__input{
+        .form__input{
           background-color: $grey-clr;
           padding: 0.2rem 1rem;
           border: thin solid darken($grey-clr, 4%);
@@ -49,19 +59,9 @@ main.main{
     }
 }
 
-.form__subscribe-input-box{
-  display: inline-block;
-  margin-top: 4.2rem;
-
-    .form__btn{
-      width: 20.3rem;
-      border-color: $purple-clr;
-    }
-}
-
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
-  main.main{
+  .main{
     height: 55.2rem;
 
       .form__subscribe{
@@ -72,11 +72,19 @@ main.main{
             margin-top: 4.8rem;
           }
 
-          label.form__label--text-p{
+          &-input-box{
+            margin-top: 3.2rem;
+
+              .form__btn{
+                width: 16.9rem;
+              }
+          }
+
+          .form__label--text-p{
             font-size: $font-medium-md-q;
           }
 
-          div input.form__input{
+          .form__input{
             width: 28.9rem;
             height: 2.8rem;
 
@@ -86,19 +94,11 @@ main.main{
           }
       }
   }
-
-  .form__subscribe-input-box{
-    margin-top: 3.2rem;
-
-      .form__btn{
-        width: 16.9rem;
-      }
-  }
 }
 
 //screens 834 x 1501
 @media (min-width: 414px) and (max-width: 834px){
-  main.main{
+  .main{
     height: 38.9rem;
 
       .form__subscribe{
@@ -108,12 +108,21 @@ main.main{
             font-size: $font-larger-md-q-2;
           }
 
-          label.form__label--text-p{
+          &-input-box{
+            margin-top: 2.2rem;
+
+              .form__btn{
+                width: 11.7rem;
+                height: 2.7rem;
+              }
+          }
+
+          .form__label--text-p{
             margin-top: 1.1rem;
             font-size: $font-small-md-q-2;
           }
 
-          div input.form__input{
+          .form__input{
             width: 19.6rem;
             height: 1.8rem;
             margin-right: 1.7rem;
@@ -123,22 +132,13 @@ main.main{
               }
           }
     }
-
-    .form__subscribe-input-box{
-      margin-top: 2.2rem;
-
-        .form__btn{
-          width: 11.7rem;
-          height: 2.7rem;
-        }
-    }
   }
 }
 
 //screens 414 x 1362
 
 @media (min-width: 0) and (max-width: 414px){
-  main.main{
+  .main{
     height: 28.9rem;
 
     .form__subscribe{
@@ -148,12 +148,21 @@ main.main{
         font-size: $font-larger-md-q-2;
       }
 
-      label.form__label--text-p{
+      &-input-box{
+        margin-top: 2.1rem;
+
+          .form__btn{
+            height: 2.7rem;
+            width: 11.7rem;
+          }
+      }
+
+      .form__label--text-p{
         font-size: $font-small-md-q-2;
         margin-top: 1.2rem;
       }
 
-      div input.form__input{
+      .form__input{
         width: 19.5rem;
         height: 1.8rem;
         margin-left: 1.6rem;
@@ -163,15 +172,6 @@ main.main{
           &::placeholder{
             font-size: 1rem;
           }
-      }
-    }
-
-    .form__subscribe-input-box{
-      margin-top: 2.1rem;
-
-      .form__btn{
-        height: 2.7rem;
-        width: 11.7rem;
       }
     }
   }
