@@ -1,4 +1,5 @@
 .footer{
+  $self: &;
   background-color: $purple-clr;
   min-height: 37rem;
   width: 100vw;
@@ -8,11 +9,11 @@
       @include flex($flex-row);
       justify-content: space-around;
 
-        .footer__left-box{
+        #{ $self }__left-box{
           margin-top: 3.7rem;
           line-height: 3.4rem;
 
-            .footer__links-list{
+            #{ $self }__links-list{
               font-size: $font-small;
 
                 ul{
@@ -22,7 +23,7 @@
                   }
                 }
 
-                .footer__link{
+                #{ $self }__link{
                   &:hover{
                     border-left-color: $white-clr;
                     border-bottom-color: $white-clr;
@@ -38,17 +39,17 @@
             }
         }
 
-        .footer__right-box{
+        #{ $self }__right-box{
           font-size: $font-smaller;
           text-align: left;
           margin: 2rem 0 0 -7.6rem;
 
-            .footer__text{
+            #{ $self }__text{
               margin-bottom: 2.8rem;
             }
         }
 
-        .footer__map{
+        #{ $self }__map{
           position: relative;
           text-align: right;
           height: 28.8rem;
@@ -98,15 +99,16 @@
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
   .footer{
+    $self: &;
     min-height: 28rem;
     padding-top: 3.8rem;
 
       &__wrapper{
-        .footer__right-box{
+        #{ $self }__right-box{
           font-size: $font-smaller-md-q;
           margin-top: 1.6rem;
 
-            .footer__text{
+            #{ $self }__text{
               margin-bottom: 1.8rem;
             }
 
@@ -115,11 +117,11 @@
             }
         }
 
-        .footer__left-box{
+        #{ $self }__left-box{
           margin-top: 2.9rem;
         }
 
-        .footer_map{
+        #{ $self }__map{
           top: -4.6rem;
           height: 23.8rem;
           width: 30.4rem;
@@ -154,6 +156,7 @@
 
 @media (min-width: 414px) and (max-width: 834px){
   .footer{
+    $self: &;
     min-height: 59.1rem;
     width: 100%;
     padding-left: 0;
@@ -161,11 +164,11 @@
       &__wrapper{
         flex-wrap: wrap;
 
-          .footer__left-box{
+          #{ $self }__left-box{
             text-align: right;
             line-height: 3rem;
 
-              ul.footer__links-list{
+              #{ $self }__links-list{
                 margin: 1.1rem 3.2rem 0 0;
               }
           }
@@ -186,7 +189,7 @@
             }
           }
 
-        .footer__right-box{
+        #{ $self }__right-box{
           &>p{
             margin-left: 3rem;
           }
@@ -196,7 +199,7 @@
           }
         }
 
-        .footer__map{
+        #{ $self }__map{
           align-self: center;
           width: 42.2rem;
           height: 33rem;
@@ -208,7 +211,7 @@
         }
       }
 
-      .footer__bottom-text{
+      #{ $self }__bottom-text{
         margin-top: 5.7rem;
         text-align: center;
       }
@@ -219,24 +222,25 @@
 
 @media (min-width: 0) and (max-width: 414px){
   .footer{
+    $self: &;
     padding: 0;
 
       &__wrapper{
         @include flex($flex-col);
         width: 100vw;
 
-          .footer__left-box{
+          #{ $self }__left-box{
             text-align: right;
             margin: 3.6rem 4.3rem 0 0;
             padding-bottom: 4.7rem;
             line-height: 3.3rem;
           }
 
-          .footer__right-box{
+          #{ $self }__right-box{
             margin-left: 5.9rem;
           }
 
-          .footer__map{
+          #{ $self }__map{
             align-self: center;
             height: 24rem;
             width: 30.6rem;

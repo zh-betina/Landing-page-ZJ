@@ -43,6 +43,8 @@ $large-icon-md-q: 2.7rem;
 $flex-col: column;
 $flex-row: row;
 
+//----------------hamburger menu - media-queries
+$hamburger-menu-md-q: "(min-width: 0px) and (max-width: 834px)";
 
 //-----------mixins:
 @mixin flex($dir){
@@ -75,4 +77,20 @@ $flex-row: row;
   color: $txt-clr;
   position: relative;
   z-index: 5;
+}
+
+@mixin hamburger-menu(){
+  @include flex($flex-col);
+  align-content: center;
+  background-color: $purple-clr;
+  padding-top: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  line-height: 6.5rem;
+  top: -1.2rem;
+  left: 0;
 }

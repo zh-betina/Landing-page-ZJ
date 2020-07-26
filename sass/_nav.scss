@@ -9,6 +9,11 @@
     width: 17.3rem;
     margin-top: -0.3rem;
     margin-right: -5.4rem;
+    @media #{ $hamburger-menu-md-q}{
+      margin-top: .1rem;
+      width: 10.2rem;
+    }
+
   }
 
     &__logo{
@@ -23,30 +28,49 @@
   }
 
 .nav__menu--box{
+  $self: nav__menu;
   @include flex($flex-row);
   justify-content: space-between;
   max-width: 49.3rem;
   margin-top: .1rem;
   padding-left: 5.3rem;
   padding-right: 2.6rem;
+  @media #{ $hamburger-menu-md-q }{
+    margin-top: 1.6rem;
+  }
 
     .nav__links--box{
-        .nav__menu--icon{
+        .#{ $self }--icon{
           visibility: hidden;
           font-size: $font-hamb-menu-icon;
+          @media #{ $hamburger-menu-md-q }{
+            visibility: visible;
           }
+        }
     }
 }
 
 .nav__links--close-box{
+  $self: nav__links;
   visibility: visible;
   z-index: 11;
   margin-left: 0;
   margin-top: 1rem;
   position: relative;
   top: -3.5rem;
+  @media #{ $hamburger-menu-md-q }{
+    display: none;
+    margin-left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    position: static;
+      &:hover{
+        display: flex;
+        width: 0;
+      }
+  }
 
-    .nav__links-list .nav__link{
+    .#{ $self }-list .nav__link{
       display: inline-block;
       font-size: $font-smaller;
 
@@ -55,6 +79,11 @@
           padding: 1.2rem;
           border: 0.1px solid transparent;
           outline: 0;
+          @media #{ $hamburger-menu-md-q }{
+            font-size: $font-hamb-menu;
+            text-align: center;
+            margin-right: 0;
+          }
 
             &:hover{
               border-top: 0.1px solid $white-clr;
@@ -80,6 +109,9 @@
   font-weight: 300;
   transition: transform .2s;
   cursor: pointer;
+  @media #{ $hamburger-menu-md-q }{
+    display: flex;
+  }
 
     &:hover{
       transform: scale(0);
@@ -90,6 +122,9 @@
   @include flex($flex-row);
   justify-content: space-around;
   width: 36.84rem;
+  @media #{ $hamburger-menu-md-q }{
+    @include hamburger-menu();
+  }
 }
 
 //Hamburger menu pop-up for smaller screens
@@ -103,64 +138,6 @@
   display: none;
 }
 
-//-----------hamburger menu window-----------------
-@media (min-width: 0px) and (max-width: 834px){
-  .nav__links-list{
-    @include flex($flex-col);
-    align-content: center;
-    background-color: $purple-clr;
-    padding-top: 0;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    line-height: 6.5rem;
-    top: -1.2rem;
-    left: 0;
-   }
-
-  .nav__button{
-    margin-top: .1rem;
-    width: 10.2rem;
-   }
-
-  .nav__menu--box{
-    margin-top: 1.6rem;
-
-    .nav__links--box{
-      .nav__menu--icon{
-        visibility: visible;
-      }
-    }
-  }
-
-  .nav__links--close-box{
-    display: none;
-    margin-left: 0;
-    width: 100vw;
-    min-height: 100vh;
-    position: static;
-
-      &:hover{
-        display: flex;
-        width: 0;
-      }
-
-      .nav__links--close-cross{
-        display: flex;
-      }
-
-      .nav__links-list{
-        .nav__link a{
-          font-size: $font-hamb-menu;
-          text-align: center;
-          margin-right: 0;
-        }
-      }
-    }
-}
 //screens 1194 x 1532
 @media (min-width: 835px) and (max-width: 1194px){
   .nav{
