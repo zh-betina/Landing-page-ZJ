@@ -54,15 +54,12 @@
           background-color: lighten($white-clr, 8%);
         }
     }
-
-    //screens 1194 x 1532
-    @media (min-width: 835px) and (max-width: 1194px){
+    @media #{$med-screen-md-q}{
         font-size: $font-medium-md-q;
         height: 3.8rem;
     }
 
-    //screens 834 x 1501 and 414 x 1362
-    @media (min-width: 0) and (max-width: 834px){
+    @media #{$hamburger-menu-md-q}{
         font-size: $font-medium-md-q-2;
         height: 2.4rem;
       }
