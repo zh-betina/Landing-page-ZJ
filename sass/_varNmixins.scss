@@ -23,6 +23,7 @@ $font-maxi-md-q: 3.4rem;
 
 //-----fonts-media-queries (834 x 1501) and (414 x 1362):
 $font-smaller-md-q-2: .9rem;
+$font-small-md-q-2--1: 1rem;
 $font-small-md-q-2: 1.4rem;
 $font-medium-md-q-2: 1.5rem;
 $font-large-md-q-2: 2.1rem;
@@ -43,8 +44,11 @@ $large-icon-md-q: 2.7rem;
 $flex-col: column;
 $flex-row: row;
 
-//----------------hamburger menu - media-queries
+//----------------media-queries
 $hamburger-menu-md-q: "(min-width: 0px) and (max-width: 834px)";
+$med-screen-md-q: "(min-width: 835px) and (max-width: 1194px)";
+$smaller-screen-md-q: "(min-width: 415px) and (max-width: 834px)";
+$smallest-screen-md-q: "(min-width: 0) and (max-width: 414px)";
 
 //-----------mixins:
 @mixin flex($dir){

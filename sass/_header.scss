@@ -6,175 +6,45 @@
   padding-top: 13.1rem;
   height: 54.9rem;
   width: 100vw;
-
-    &__box{
-      width: 80.6rem;
-      margin-top: 27.2rem;
-    }
-  }
-
-.header__img{
-  height: 53.8rem;
-  margin-top: 9.1rem;
-  width: inherit;
-
-    img{
-      height: inherit;
-      width: inherit;
-    }
-}
-
-h1.header__text{
-  font-size: $font-maxi;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 1rem;
-
-    span{
-      display: block;
-    }
-}
-
-.header__buttons-box{
-  margin-left: 16.4rem;
-  padding-top: 4.5rem;
-
-    .header__btn{
-      width: 22rem;
-      box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
-    }
-
-    & button{
-      &:first-child{
-        margin-right: 6rem;
-      }
-
-      &:nth-child(2){
-        background-color: transparent;
-      }
-    }
-}
-
-//screens 1194 x 1532
-@media (min-width: 835px) and (max-width: 1194px){
-  .header{
+  @media #{$med-screen-md-q}{
     height: 41.8rem;
     width: 100vw;
-
-      &__text{
-        position: relative;
-        top: -1.4rem;
-        font-size: $font-larger-md-q;
-      }
-
-      &__btn{
-        width: 18.3rem;
-      }
-
-      &__box{
-        width: 66.8rem;
-        margin-top: 30.1rem;
-        align-self: center;
-
-          .header__buttons-box{
-            position: relative;
-            top: -4.7rem;
-            height: 10.2rem;
-            margin-left: 12.4rem;
-          }
-
-          .header__img{
-            height: 44.7rem;
-
-              img{
-                margin-top: -12.5rem;
-              }
-          }
-      }
-    }
+  }
+  @media #{$smaller-screen-md-q}{
+    height: 37.3rem;
+    padding-top: 0;
+    width: 100vw;
+  }
+  @media #{$smallest-screen-md-q}{
+    padding-top: 0;
+    margin-top: 0;
+    height: 31.2rem;
   }
 
-  //screens 834 x 1501
-  @media (min-width: 413px) and (max-width: 834px){
-
-    .header{
-      height: 37.3rem;
-      padding-top: 0;
-      width: 100vw;
-
-        &__box{
-          width: 47rem;
-          margin-top: 15.9rem;
-
-          .header__text{
-            font-size: 2.3rem;
-            top: -23.5rem;
-          }
-
-          .header__buttons-box{
-            width: 32.2rem;
-            margin-left: 7.7rem;
-            padding-top: 1.2rem;
-            top: -26.9rem;
-
-              .header__btn{
-                width: 12.8rem;
-              }
-          }
-
-      .header__img{
+    &__img{
+      height: 53.8rem;
+      margin-top: 9.1rem;
+      width: inherit;
+      @media #{$med-screen-md-q}{
+        height: 44.7rem;
+      }
+      @media #{$smaller-screen-md-q}{
         margin-top: 1.7rem;
         position: relative;
         top: 3.8rem;
         height: 31.3rem;
-
-          img{
-            height: inherit;
-          }
       }
-    }
-  }
-}
-
-//screens 414 x 1362
-
-@media (min-width: 0) and (max-width: 414px){
-  .header{
-    padding-top: 0;
-    margin-top: 0;
-    height: 31.2rem;
-
-      &__box{
-        width: 35.3rem;
-        margin-top: 16.4rem;
-        @include flex($flex-col);
-        align-items: center;
-
-          .header__text{
-            font-size: 1.9rem;
-            padding-top: 0;
-            margin-top: 0;
-          }
-
-        .header__buttons-box{
-          @include flex($flex-row);
-          justify-content: space-between;
-          min-width: 23.4rem;
-          margin-left: 0;
-          padding-top: .8rem;
-
-            .header__btn{
-              width: 10rem;
-              height: 2.1rem;
-              font-size: 1.1rem;
-              margin: 0;
-            }
-        }
-
-      .header__img{
+      @media #{$smallest-screen-md-q}{
         margin-top: 5.2rem;
         height: 23.7rem;
       }
+
+        img{
+          height: inherit;
+          width: inherit;
+          @media #{$med-screen-md-q}{
+            margin-top: -12.5rem;
+          }
+        }
     }
-  }
 }

@@ -1,0 +1,73 @@
+.txt{
+
+  &--uppercase{
+    text-transform: uppercase;
+  }
+
+  &--dark{
+    color: $black-clr;
+  }
+
+  &-form-label{
+    font-size: $font-medium;
+    font-weight: 300;
+    @media #{$med-screen-md-q}{
+      font-size: $font-medium-md-q;
+    }
+    @media #{$smaller-screen-md-q}{
+      margin-top: 1.1rem;
+      font-size: $font-small-md-q-2;
+    }
+    @media #{$smallest-screen-md-q}{
+      font-size: $font-small-md-q-2;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &-header{
+    font-size: $font-maxi;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    @media #{$med-screen-md-q}{
+      position: relative;
+      top: -1.4rem;
+      font-size: $font-larger-md-q;
+    }
+    @media #{$smaller-screen-md-q}{
+      font-size: 2.3rem;
+      top: -23.5rem;
+    }
+    @media #{$smallest-screen-md-q}{
+      font-size: 1.9rem;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+      span{
+        display: block;
+      }
+  }
+
+  &-footer{
+    margin-bottom: 2.8rem;
+    @media #{$med-screen-md-q}{
+      margin-bottom: 1.8rem;
+    }
+      &--bottom{
+        font-size: $font-small;
+        margin-top: -2.4rem;
+        @media #{$med-screen-md-q}{
+          font-size: $font-small-md-q;
+        }
+        @media #{$smaller-screen-md-q}{
+          margin-top: 5.7rem;
+          text-align: center;
+        }
+        @media #{$smallest-screen-md-q}{
+          margin-top: 6.2rem;
+          text-align: center;
+        }
+      }
+  }
+}

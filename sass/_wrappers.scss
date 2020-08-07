@@ -1,0 +1,50 @@
+.wrapper{
+  &-menu{
+    @include flex($flex-row);
+    justify-content: space-between;
+    max-width: 49.3rem;
+    margin-top: .1rem;
+    padding-left: 5.3rem;
+    padding-right: 2.6rem;
+    @media #{ $hamburger-menu-md-q }{
+      margin-top: 1.6rem;
+    }
+    @media #{ $med-screen-md-q }{
+      margin-top: .7rem;
+      padding-right: 0;
+      padding-left: 1.3rem;
+    }
+  }
+
+  &-header{
+    width: 80.6rem;
+    margin-top: 27.2rem;
+    @media #{$med-screen-md-q}{
+      width: 66.8rem;
+      margin-top: 30.1rem;
+      align-self: center;
+    }
+    @media #{$smaller-screen-md-q}{
+      width: 47rem;
+      margin-top: 15.9rem;
+    }
+    @media #{$smallest-screen-md-q}{
+      width: 35.3rem;
+      margin-top: 16.4rem;
+      @include flex($flex-col);
+      align-items: center;
+    }
+  }
+
+  &-footer{
+    @include flex($flex-row);
+    justify-content: space-around;
+    @media #{$smaller-screen-md-q}{
+      flex-wrap: wrap;
+    }
+    @media #{$smallest-screen-md-q}{
+      @include flex($flex-col);
+      width: 100vw;
+    }
+  }
+}
