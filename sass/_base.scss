@@ -1,0 +1,38 @@
+
+html,
+body,
+button,
+nav,
+ul,
+h2{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  @include flex($flex-col);
+  margin: inherit;
+  font-family: $font-family-main;
+  color: $white-clr;
+  width: 100vw;
+}
+
+//lists
+ul{
+  list-style: none;
+}
+
+//links
+a{
+  &:link,
+  &:active,
+  &:visited{
+    text-decoration: none;
+    color: $white-clr;
+  }
+}

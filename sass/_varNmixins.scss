@@ -4,7 +4,7 @@ $white-clr: #fff;
 $black-clr: #000;
 $grey-clr: #E3DBDB;
 
-//---------fonts:
+//---------fonts-default:
 $font-family-main: 'Roboto', sans-serif;
 $font-smaller: 1.6rem;
 $font-small: 1.8rem;
@@ -13,14 +13,42 @@ $font-large: 3.6rem;
 $font-larger: 3.8rem;
 $font-maxi: 4rem;
 
+//-----fonts-media-queries(1194 x 1532):
+$font-smaller-md-q: 1.3rem;
+$font-small-md-q: 1.5rem;
+$font-medium-md-q: 2rem;
+$font-large-md-q: 3rem;
+$font-larger-md-q: 3.2rem;
+$font-maxi-md-q: 3.4rem;
+
+//-----fonts-media-queries (834 x 1501) and (414 x 1362):
+$font-smaller-md-q-2: .9rem;
+$font-small-md-q-2--1: 1rem;
+$font-small-md-q-2: 1.4rem;
+$font-medium-md-q-2: 1.5rem;
+$font-large-md-q-2: 2.1rem;
+$font-larger-md-q-2: 2.2rem;
+$font-maxi-md-q-2: 2.3rem;
+
+//-----fonts-hamburger-menu
+$font-hamb-menu: 2.3rem;
+$font-hamb-menu-icon: 2.7rem;
+
 //----------icons size:
 $small-icon: 2rem;
 $large-icon: 3.2rem;
-
+//----------icons size media-queries(1194 x 1532):
+$small-icon-md-q: 1.7rem;
+$large-icon-md-q: 2.7rem;
 //---------flexbox settings var:
 $flex-col: column;
 $flex-row: row;
 
+//----------------media-queries
+$hamburger-menu-md-q: "(min-width: 0px) and (max-width: 834px)";
+$med-screen-md-q: "(min-width: 835px) and (max-width: 1194px)";
+$smaller-screen-md-q: "(min-width: 415px) and (max-width: 834px)";
+$smallest-screen-md-q: "(min-width: 0) and (max-width: 414px)";
 
 //-----------mixins:
 @mixin flex($dir){
@@ -40,9 +68,33 @@ $flex-row: row;
   left: $left;
 }
 
+@mixin hover-after(){
+  width: 100%;
+  height: 100%;
+}
+
+@mixin active-after(){
+  transform: scaleX(1) scaleY(0);
+}
 @mixin btn-config($bgr-clr, $txt-clr){
   background-color: $bgr-clr;
   color: $txt-clr;
   position: relative;
   z-index: 5;
+}
+
+@mixin hamburger-menu(){
+  @include flex($flex-col);
+  align-content: center;
+  background-color: $purple-clr;
+  padding-top: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  line-height: 6.5rem;
+  top: -1.2rem;
+  left: 0;
 }

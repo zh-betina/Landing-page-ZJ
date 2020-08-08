@@ -1,0 +1,156 @@
+.btn{
+  font-size: $font-medium;
+  border-radius: 3rem;
+  height: 4.5rem;
+  border: thin solid;
+  outline: 0;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &--purple{
+      @include btn-config($purple-clr, $white-clr);
+
+      &:hover{
+        color: $black-clr;
+
+        &::after{
+          @include hover-after();
+        }
+      }
+
+      &::after{
+        @include after(-3, 0, 100%, 0, 0);
+        background-color: $white-clr;
+        border-radius: 3rem;
+      }
+
+      &:active::after{
+        @include active-after();
+        background-color: darken($purple-clr, 8%);
+      }
+    }
+
+    &--white{
+      @include btn-config($white-clr, $purple-clr);
+
+        &:hover{
+          color: $white-clr;
+
+          &::after{
+            @include hover-after();
+          }
+        }
+
+        &::after{
+          @include after(-3, 0, 100%, 0, 0);
+          background-color: $purple-clr;
+          border-radius: 3rem;
+        }
+
+        &:active::after{
+          @include active-after();
+          background-color: lighten($white-clr, 8%);
+        }
+    }
+    @media #{$med-screen-md-q}{
+        font-size: $font-medium-md-q;
+        height: 3.8rem;
+    }
+
+    @media #{$hamburger-menu-md-q}{
+        font-size: $font-medium-md-q-2;
+        height: 2.4rem;
+      }
+//btns in navbar:
+      &-nav{
+        width: 17.3rem;
+        margin-top: -.3rem;
+        margin-right: -5.4rem;
+        @media #{ $hamburger-menu-md-q}{
+          margin-top: .1rem;
+          width: 10.2rem;
+        }
+        @media #{ $med-screen-md-q}{
+          width: 14.2rem;
+          margin-right: -1.4rem;
+        }
+        @media #{ $smaller-screen-md-q}{
+          right: 5.5rem;
+          margin-right: 0;
+        }
+        @media #{ $smallest-screen-md-q}{
+          margin-right: 2.1rem;
+        }
+      }
+//btns in header:
+    &-header{
+      width: 22rem;
+      box-shadow: 4px 6px 27px -8px rgba($black-clr,.45);
+      @media #{$med-screen-md-q}{
+        width: 18.3rem;
+      }
+      @media #{$smaller-screen-md-q}{
+        width: 12.8rem;
+      }
+      @media #{$smallest-screen-md-q}{
+        width: 10rem;
+        height: 2.1rem;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    }
+
+//btns in subscription form:
+
+    &-form{
+      width: 20.3rem;
+      border-color: $purple-clr;
+      @media #{$med-screen-md-q}{
+        width: 16.9rem;
+      }
+      @media #{$smaller-screen-md-q}{
+        width: 11.7rem;
+        height: 2.7rem;
+      }
+      @media #{$smallest-screen-md-q}{
+        height: 2.7rem;
+        width: 11.7rem;
+      }
+    }
+}
+
+.buttons{
+  margin-left: 16.4rem;
+  padding-top: 4.5rem;
+  @media #{$med-screen-md-q}{
+    position: relative;
+    top: -4.7rem;
+    height: 10.2rem;
+    margin-left: 12.4rem;
+  }
+  @media #{$smaller-screen-md-q}{
+    width: 32.2rem;
+    margin-left: 7.7rem;
+    padding-top: 1.2rem;
+    top: -26.9rem;
+  }
+  @media #{$smallest-screen-md-q}{
+    @include flex($flex-row);
+    justify-content: space-between;
+    min-width: 23.4rem;
+    margin-left: 0;
+    padding-top: .8rem;
+  }
+
+    & button{
+      &:first-child{
+        margin-right: 6rem;
+      }
+
+      &:nth-child(2){
+        background-color: transparent;
+      }
+    }
+}
