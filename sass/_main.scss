@@ -57,12 +57,12 @@
         .input{
 
           background-color: $grey-clr;
-          padding: 0.2rem 1rem;
+          padding: .2rem 1rem;
           border: thin solid darken($grey-clr, 4%);
           color: $black-clr;
           width: 37.5rem;
           height: 4.1rem;
-          border-radius: 0.8rem;
+          border-radius: .8rem;
           margin-right: 4rem;
           @media #{$med-screen-md-q}{
             width: 28.9rem;

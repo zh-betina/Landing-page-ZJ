@@ -8,7 +8,7 @@
     padding-right: 11.6rem;
   }
   @media #{$smaller-screen-md-q}{
-    padding: 2.5rem 0 2.5rem 0;
+    padding: 2.5rem 0;
   }
   @media #{$smallest-screen-md-q}{
     padding: 2.4rem 0 1.3rem .5rem;
@@ -63,11 +63,11 @@
   }
 
       &__icon--open{
-        visibility: hidden;
+        display: none;
         font-size: $font-hamb-menu-icon;
 
         @media #{ $hamburger-menu-md-q }{
-          visibility: visible;
+          display: inline-block;
         }
 
         @media #{ $smaller-screen-md-q}{
@@ -155,7 +155,7 @@
         a{
           transition: all .6s;
           padding: 1.2rem;
-          border: 0.1px solid transparent;
+          border: .1px solid transparent;
           outline: 0;
           @media #{ $hamburger-menu-md-q }{
             font-size: $font-hamb-menu;
@@ -164,14 +164,14 @@
           }
 
             &:hover{
-              border-top: 0.1px solid $white-clr;
-              border-bottom: 0.1px solid $white-clr;
+              border-top: .1px solid $white-clr;
+              border-bottom: .1px solid $white-clr;
               box-shadow: -1px 16px 21px -17px $white-clr;
             }
 
             &:active{
               background-color: darken($purple-clr, 5%);
-              border: 0.1px solid transparent;
+              border: .1px solid transparent;
               box-shadow: 0 3px 22px -10px $white-clr;
             }
         }
