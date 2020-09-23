@@ -1,6 +1,7 @@
 ## Responsive (desktop-first) Landing Page
 
 Design: Żaneta Jażdżyk (@nettecode).
+Live deployment: [here](https://zh-betina.github.io/Landing-page-ZJ/)
 
 ### Scripts:
 
