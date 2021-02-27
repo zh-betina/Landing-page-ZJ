@@ -1,9 +1,11 @@
-## Responsive (desktop-first) Landing Page
+# Responsive Landing Page
 
-Design: Żaneta Jażdżyk (@nettecode).
-Live deployment: [here](https://zh-betina.github.io/Landing-page-ZJ/)
+Design: Żaneta Jażdżyk (@nettecode).<br>
+Coded with desktop-first approach, first attempt to apply BEM methodology.
+Used: HTML, SCSS, npm scripts, BEM methodology
+You can preview it live [RIGHT HERE](https://zh-betina.github.io/Landing-page-ZJ/)
 
-### Scripts:
+## Scripts:
 
   1) `npm install`
   2) `npm start`(which runs live-server and sass-watch at the same time)
